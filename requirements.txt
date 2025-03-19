@@ -3,3 +3,6 @@ pandas
 tensorflow
 scikit-learn
 nltk
+gunicorn
+Flask
+flask-cors

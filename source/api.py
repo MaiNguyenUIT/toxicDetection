@@ -3,9 +3,11 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pickle
 from preprocess import clean_text, MAX_SEQUENCE_LENGTH
+from flask_cors import CORS
 
 # Khởi tạo Flask app
 app = Flask(__name__)
+CORS(app, origins=["http://localhost:3000"], supports_credentials=True)
 
 # Load mô hình và tokenizer
 model = tf.keras.models.load_model('../models/lstm_toxic_model_binary.h5')
